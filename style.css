@@ -1,0 +1,122 @@
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+*{ /*selects all elements on the page and sets margin, padding, and box-sizing to 0 and font-family to "Poppins", sans-serif. This sets a consistent styling across all elements on the page.*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body{ /*selector targets the body element and sets it to a flex container with centered alignment and a minimum height of the full viewport height (100vh). The background is set to a blue color (#6990F2).*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #6990F2;
+}
+
+::selection{ /*selector sets the styling for selected text. In this case, selected text is displayed with white text on a blue background. (In other words by using left click and select the text in the page it should highlight it with the following styles) */
+  color: #fff;
+  background: #6990F2;
+}
+.wrapper{
+  width: 430px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 30px;
+  box-shadow: 7px 7px 12px rgba(0,0,0,0.05);
+}
+.wrapper header{
+  color: #6990F2;
+  font-size: 27px;
+  font-weight: 600;
+  text-align: center;
+}
+.wrapper form{
+  height: 167px;
+  display: flex;
+  cursor: pointer;
+  margin: 30px 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 2px dashed #6990F2;
+}
+form :where(i, p){ /*selects all i and p elements within the form element and sets their text color to blue. (In other words, form i and form p will inherit  this property)*/
+  color: #6990F2;
+}
+form i{ /* selects all i elements within the form element and sets their font size to 50px.*/
+  font-size: 50px;
+}
+form p{ /* selects all p elements within the form element and sets their margin-top property to 15px as well as its font-size to 16 px */
+  margin-top: 15px; /*this property adds a space of 15 pixels above the text*/
+  font-size: 16px; /*this property sets the size of the text to 16 pixels*/
+}
+
+section .row{ /*This selector targets all elements with class .row that are inside a section element*/
+  margin-bottom: 10px; /* This property adds a margin of 10 pixels to the bottom of each .row element. */
+  background: #E9F0FF;
+  list-style: none; /*This property removes the default bullet points or numbering from each .row element.*/
+  padding: 15px 20px;
+  border-radius: 5px; /* This property adds a border radius of 5 pixels to each .row element, which makes the corners slightly rounded.*/
+  display: flex; /*This property sets the display of each .row element to a flex container, which allows us to use flexbox to control the layout of the elements inside the .row.*/
+  align-items: center; /*This property aligns the items inside the .row container along the vertical axis to the center*/
+  justify-content: space-between; /*This property aligns the items inside the .row container along the horizontal axis and distributes the remaining space between the items, so that the first item is aligned to the left and the last item is aligned to the right.*/
+  /*justify-content: only works when the parent element has display: flex property set. This is because the justify-content property works only on flex containers.*/
+}
+section .row i{
+  color: #6990F2;
+  font-size: 30px;
+}
+section .details span{
+  font-size: 14px;
+}
+.progress-area .row .content{
+  width: 100%;
+  margin-left: 15px;
+}
+.progress-area .details{
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  justify-content: space-between;
+}
+.progress-area .content .progress-bar{
+  height: 6px;
+  width: 100%;
+  margin-bottom: 4px;
+  background: #fff;
+  border-radius: 30px;
+}
+.content .progress-bar .progress{ /*This code targets the child .progress element of an element with class .progress-bar which is further a child of an element with class .content*/
+  height: 100%;
+  width: 0%;
+  background: #6990F2;
+  border-radius: inherit; /*The border-radius property is set to inherit, which means the progress bar will inherit the border-radius property from its parent element, which is .progress-bar in this case it's 30px.*/
+}
+.uploaded-area{
+  max-height: 232px; /*This property sets the maximum height for the container to 232 pixels. If the content of the container is taller than 232 pixels, it will overflow and the scrollbar will appear.*/
+  overflow-y: scroll; /*This property sets the vertical scrollbar to be always visible when the content exceeds the container's height. It also enables the scrolling functionality to the container*/
+}
+.uploaded-area.onprogress{ /*It is used to style the container during a specific event, which in this case is a file upload progress.*/
+  max-height: 150px; /*This property sets the maximum height for the container to 150 pixels during the file upload progress. This makes the container smaller, leaving more space for the progress bar*/
+}
+.uploaded-area::-webkit-scrollbar{ /*This selector targets the scrollbar of the container. The ::-webkit-scrollbar pseudo-element is a vendor-specific pseudo-element that targets the scrollbar of the container element in WebKit-based browsers, such as Chrome and Safari.*/
+  width: 0px; /*This property sets the width of the scrollbar to 0 pixels, effectively hiding it from view.*/
+}
+.uploaded-area .row .content{
+  display: flex;
+  align-items: center;
+}
+.uploaded-area .row .details{
+  display: flex; /* this property allow the element to be displayed as a flexible container, allowing for more advanced layout options.*/
+  margin-left: 15px; /*creating some spacing between the "details" element and its sibling elements.*/
+  flex-direction: column; /*this property sets the direction of the flexible items inside the "details" element to be displayed in a vertical column. This means that child elements inside "details" will be stacked on top of each other rather than side by side.*/
+}
+.uploaded-area .row .details .size{
+  color: #404040;
+  font-size: 11px;
+}
+.uploaded-area i.fa-check{
+  font-size: 16px;
+}
