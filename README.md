@@ -1,4 +1,4 @@
-# If you encounter a wanring while uploading a file with a big size. then you should modify the PHP Configration.
+# If you encounter a warning while uploading a file of a big size. then you should modify the PHP Configuration.
 
 The PHP server has a configuration setting called post_max_size that limits the maximum size of POST data that can be submitted to the server. By default, the maximum allowed size is usually set to 8 MB, but it can be changed in the PHP configuration file `php.ini` or in the server configuration file.
 
